@@ -1,4 +1,4 @@
-db.trips.insertMany([
+export const trips = [
   {
     date: 1673980200000,
     from: "ChIJL_P_CXMEDTkRw0ZdG-0GVvw",
@@ -59,4 +59,4 @@ db.trips.insertMany([
     busFare: 850,
     busName: "Eicher Motors",
   },
-]);
+];

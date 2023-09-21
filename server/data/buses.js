@@ -1,4 +1,4 @@
-db.bus_details.insertMany([
+export const buses = [
   {
     name: "IntrCity Smart Bus",
     totalSeats: 38,
@@ -78,4 +78,4 @@ db.bus_details.insertMany([
     rating: 4.5,
     animeties: ["Live Tracking", "Policies", "Photos", "Amenities", "Reviews"],
   },
-]);
+];

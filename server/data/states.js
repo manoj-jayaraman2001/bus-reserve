@@ -1,4 +1,4 @@
-db.state_district.insertMany([
+export const states = [
   {
     state: "Andhra Pradesh",
     districts: [
@@ -888,4 +888,4 @@ db.state_district.insertMany([
       "Uttar Dinajpur (North Dinajpur)",
     ],
   },
-]);
+];
