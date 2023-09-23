@@ -11,7 +11,7 @@ const bookedSchema = new mongoose.Schema({
     required: true,
   },
   seatNo: {
-    type: String,
+    type: Array,
     required: true,
   },
   date: {
