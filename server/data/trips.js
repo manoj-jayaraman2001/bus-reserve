@@ -8,7 +8,7 @@ export const trips = [
     EndTime: 1673980200000,
     category: "A/C Sleeper (2+1)",
     SeatBooked: ["1UA", "3UA", "4LB", "4LC"],
-    bus_no: "",
+    bus_no: 7728,
     animeties_list: [
       "Live Tracking",
       "Policies",
@@ -28,7 +28,7 @@ export const trips = [
     EndTime: 1673980200000,
     category: "A/C Sleeper (2+1)",
     SeatBooked: ["2UA", "4UA", "5LB", "5LC"],
-    bus_no: "",
+    bus_no: 4578,
     animeties_list: [
       "Live Tracking",
       "Policies",
@@ -48,7 +48,7 @@ export const trips = [
     EndTime: 1673980200000,
     category: "A/C Sleeper (2+1)",
     SeatBooked: ["2UA", "4UA", "5LB", "5LC"],
-    bus_no: "",
+    bus_no: 4221,
     animeties_list: [
       "Live Tracking",
       "Policies",

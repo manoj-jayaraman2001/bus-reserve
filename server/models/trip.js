@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 // Define the Trips schema
 const tripsSchema = new mongoose.Schema({
   date: {
-    type: Date,
+    type: Number,
     required: true,
   },
   from: {
@@ -19,11 +19,11 @@ const tripsSchema = new mongoose.Schema({
     required: true,
   },
   startTime: {
-    type: Date,
+    type: Number,
     required: true,
   },
   EndTime: {
-    type: Date,
+    type: Number,
     required: true,
   },
   category: {
@@ -33,7 +33,7 @@ const tripsSchema = new mongoose.Schema({
     type: String,
   }],
   bus_no: {
-    type: String,
+    type: Number,
   },
   amenities_list: [{
     type: String,

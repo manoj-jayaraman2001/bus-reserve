@@ -35,33 +35,32 @@ async function getTripsByDate(req, res) {
 
 // filter trips such as rating, time etc.,
 async function filterTrips(req, res) {
-  try {
-    const {
-      from,
-      to,
-      startTime,
-      endTime,
-      startRating = 1,
-      endRating = 5,
-      busName,
-    } = req.query;
-    const query = {};
+  const { from, to, startTime, endTime, busName } = req.query;
+  const query = {};
 
-    const filterableParams = ['from', 'to', 'startTime', 'endTime', 'busName'];
+  const filterableParams = ["from", "to", "startTime", "endTime", "busName"];
 
-    for (const param of filterableParams) {
-      if (req.query[param]) {
-        query[param] = req.query[param];
-      }
+  for (const param of filterableParams) {
+    if (req.query[param]) {
+      query[param] = req.query[param];
     }
-    query.rating = { $gte: startRating, $lte: endRating };
-    const filteredTrips = await Trips.find(query); 
+  }
+  // if(query[startTime]){
+  //   query[startTime] = new Date(query[startTime])
+  //   console.log(query[startTime])
+  // }
+  const dateString = query["startTime"]
+  
+  // query["startTime"] = new Date("2023-01-17T18:30:00.000+00:00");
+  console.log("2023-01-17T18:30:00.000+00:00");
+  console.log(query[startTime])
+  try {
+    const filteredTrips = await Trips.find(query);
     res.json(filteredTrips);
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json(error.message);
   }
 }
-
 
 async function addTrip(req, res) {
   const newTripData = req.body;

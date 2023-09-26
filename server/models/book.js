@@ -15,7 +15,7 @@ const bookedSchema = new mongoose.Schema({
     required: true,
   },
   date: {
-    type: Date,
+    type: Number,
   },
   from: {
     type: String,
@@ -26,11 +26,11 @@ const bookedSchema = new mongoose.Schema({
     required: true,
   },
   startTime: {
-    type: Date,
+    type: Number,
     required: true,
   },
   EndTime: {
-    type: Date,
+    type: Number,
     required: true,
   },
   busFare: {
