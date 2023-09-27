@@ -20,7 +20,11 @@ const Navbar = () => {
           <NavLink>About us</NavLink>
           <NavLink>Contact us</NavLink>
         </div>
-        <button className="btn">Login</button>
+        <div className="auth">
+          <button className="btn-option">Register</button>
+          <button className="btn">Login</button>
+        </div>
+
         <div
           className="menu-icon"
           onClick={() => {
@@ -38,6 +42,7 @@ const Navbar = () => {
           <NavLink>Tickets</NavLink>
           <NavLink>About us</NavLink>
           <NavLink>Contact us</NavLink>
+          <button className="btn-option">Register</button>
           <button className="btn">Login</button>
         </div>
       </div>

@@ -1,15 +1,13 @@
-
 .home {
-    height: calc(100vh - 70px);
-    width: 100vw;
+  width: 100%;
+  height: calc(100% - 80px);
 }
 .hero {
-   overflow: hidden;
-
-}
-
-.hero-img {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
+  background-image: url("../../assets/bushero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

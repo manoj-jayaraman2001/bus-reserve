@@ -2,11 +2,12 @@
 .navbar{
     position: relative;
     box-shadow: var(--boxShadow);
+    width: 100%;
 }
 
 .wrapper{
     height: 70px;
-    padding: 0 20px;
+    padding: 0 30px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,7 +53,7 @@ a{
     top: 100%;
 }
 .close{
-    top: calc(-200% - 80px);
+    top: -380%;
    
 }
 
@@ -65,7 +66,10 @@ a{
     display: block;
 }
 
-.links, .btn{
+.links{
+    display: none;
+}
+.auth button{
     display: none;
 }
 
@@ -74,7 +78,11 @@ a{
     cursor: pointer;
     z-index: 2;
 }
-
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
 
 /*mid screens &  desktop view */
 
@@ -88,7 +96,7 @@ a{
         display: none;
     } 
 
-    .links, .btn{
+    .links, .auth button{
         display: block;
     }
     .links{
@@ -98,7 +106,7 @@ a{
         margin: 0 20% 0 auto;
     }
     .btn{
-        margin-right: 5% ;
+        margin-right: 3% ;
     }
     
 }
