@@ -1,41 +1,47 @@
 import { useState } from "react";
-// import { ArrowDropDown} from '@mui/icons-material';
+import PlaceAutoComplete from "../PlaceAutoComplete";
 import { CalendarMonthOutlined } from "@mui/icons-material";
 import getOffBus from "../../assets/get-of-bus.png";
 import getOnBus from "../../assets/get-on-bus.png";
+import MuiDayPicker from "../MuiDayPicker";
+import dayjs from "dayjs";
 import "./searchtrip.css";
 
 const SearchTrip = () => {
-  const [from, setFrom] = useState("Chennai,TamilNadu");
-  const [to, setTo] = useState("Nellore,Andhrapradesh");
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [date, setDate] = useState(dayjs(new Date()));
 
+  console.log({ from, to, date });
   return (
-    <div className="search-parameters">
-      <div className="search-input from">
-        <div className="heading">
-          <img src={getOnBus} className="imgIcon" />
-          <p className="input-heading">From</p>
+    <>
+      <div className="search-parameters">
+        <div className="search-input from">
+          <div className="heading">
+            <img src={getOnBus} className="imgIcon" />
+            <p className="input-heading">From</p>
+          </div>
+          <PlaceAutoComplete setPlace={setFrom} />
         </div>
-        <input
-          type="text"
-          value={from}
-          onChange={() => setFrom((e) => setFrom(e.target.value))}
-        />
-      </div>
-      <div className="search-input to">
-        <div className="heading">
-          <img src={getOffBus} className="imgIcon" />
-          <p className="input-heading">To</p>
+        <div className="search-input to">
+          <div className="heading">
+            <img src={getOffBus} className="imgIcon" />
+            <p className="input-heading">To</p>
+          </div>
+          <PlaceAutoComplete setPlace={setTo} />
         </div>
-        <input type="text" value={to} onChange={(e) => setTo(e.target.value)} />
-      </div>
-      <div className="search-input date">
-        <div className="heading">
-          <CalendarMonthOutlined className="icon" />
-          <p className="input-heading">Travel Date</p>
+        <div className="search-input date">
+          <div className="heading">
+            <CalendarMonthOutlined className="icon" />
+            <p className="input-heading">Travel Date</p>
+          </div>
+          <MuiDayPicker date={date} setDate={setDate} />
         </div>
       </div>
-    </div>
+      <div className="search-btn">
+        <button className="btn extra-btn">SEARCH BUSES</button>
+      </div>
+    </>
   );
 };
 

@@ -102,8 +102,8 @@ a{
     .links{
         display: flex;
         align-items: center;
-        gap: 40px;
-        margin: 0 20% 0 auto;
+        gap: 35px;
+        margin: 0 10% 0 auto;
     }
     .btn{
         margin-right: 3% ;

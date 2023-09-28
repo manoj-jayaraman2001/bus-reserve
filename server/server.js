@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import express from "express";
 import tripRoutes from './routes/trips.js'
 import bookingRoutes from './routes/booking.js'
+import placeRoutes from './routes/places.js'
+import cors from 'cors'
 // import Trips from './models/trip.js'
 // import stateDistrict from "./models/stateDistrict.js";
 // import BusDetails from "./models/bus.js";
@@ -14,13 +16,14 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors())
 app.get("/", (req,res) => {
   res.send("server is started ");
 });
 
 app.use('/trips', tripRoutes)
 app.use('/booking', bookingRoutes)
+app.use('/places', placeRoutes)
 
 
 
