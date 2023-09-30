@@ -14,17 +14,6 @@
 
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-weight: 600;
-    font-size: 18px;
-    color: var(--primaryColor);
-    font-family: var(--ralewayFont);
-    z-index: 2;
-}
-
 a{
     font-size: 16.5px;
     font-weight: 500;

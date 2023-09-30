@@ -2,8 +2,8 @@ import happyCustomersImg from "../../assets/happy-customer.jpg";
 import ticketsImg from "../../assets/tickets.jpg";
 import busesImg from "../../assets/buses.svg";
 import { Avatar } from "@mui/material";
-import { deepOrange, deepPurple, blueGrey } from "@mui/material/colors";
-import { StarBorderOutlined } from "@mui/icons-material";
+import { deepOrange, deepPurple, blueGrey, brown, teal, amber } from "@mui/material/colors";
+import { StarRateRounded } from "@mui/icons-material";
 import "./styles.css";
 export const StatsComponent = () => {
   const statsList = [
@@ -67,23 +67,23 @@ export const CustomerReviews = () => {
     },
   ];
   const ReviewCard = ({ name, since, rating, review }) => {
-    const colors = [deepPurple, deepOrange, blueGrey];
+    const colors = [deepPurple, deepOrange, blueGrey, brown, teal, amber];
     const randomIndex = Math.floor(Math.random() * colors.length);
     const randomColor = colors[randomIndex];
     return (
       <div className="review-card">
         <div className="review-head">
-          <Avatar>{name[0]}</Avatar>
+          <Avatar sx={{ bgcolor: randomColor[500], fontWeight: 600 }}>{name[0]}</Avatar>
           <div className="review-name">
-            <p>{name}</p>
-            <p>Customer since {since}</p>
+            <span className="review-user-name">{name}</span>
+            <span style={{fontSize: 11.5}}>Customer since {since}</span>
           </div>
         </div>
         <div className="rating">
-          <StarBorderOutlined style={{fontSize : 18, fontWeight: 500}}/>
-          {rating}
+          <StarRateRounded sx={{ fontSize: 16 }} />
+          <span>{rating}</span>
         </div>
-        <div>{review}</div>
+        <div className="review"><span>{review}</span></div>
       </div>
     );
   };

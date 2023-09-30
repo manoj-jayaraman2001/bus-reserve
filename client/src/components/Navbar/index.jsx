@@ -1,8 +1,8 @@
 import {
-  DirectionsBusFilled,
   MenuOpen,
   CloseOutlined,
 } from "@mui/icons-material";
+import ReserveLogo from '../../assets/bus.png'
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./navbar.css";
@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="logo">
-          <DirectionsBusFilled className="icon" style={{ fontSize: 30 }} />
+          <img src={ReserveLogo} style={{height: 32, width: 32}}/>
           <p>RESERVE</p>
         </div>
         <div className="links">
