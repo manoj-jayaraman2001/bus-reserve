@@ -1,4 +1,4 @@
-import Autocomplete from "@mui/material/Autocomplete";
+import Autocomplete, {createFilterOptions} from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { useEffect, useState, useMemo } from "react";
 
@@ -6,6 +6,9 @@ export default function PlaceAutoComplete({setPlace}) {
   const [data, setData] = useState([]);
   const [isloading, setLoading] = useState(true);
 
+  const filterOptions = createFilterOptions({
+    matchFrom: 'start',
+  });
   const styles = {
     padding: "5px 0",
   };
@@ -33,6 +36,7 @@ export default function PlaceAutoComplete({setPlace}) {
       id="place-autocomplete"
       size="small"
       options={placeOptions}
+      filterOptions={filterOptions}
       loading={isloading}
       onInputChange={(e, value) => {setPlace(value)}}
       renderInput={(params) => (

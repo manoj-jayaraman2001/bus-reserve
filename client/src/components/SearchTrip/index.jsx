@@ -14,34 +14,32 @@ const SearchTrip = () => {
 
   console.log({ from, to, date });
   return (
-    <>
+    <div style={{display:'flex', flexDirection: 'column', gap: 25}}>
       <div className="search-parameters">
         <div className="search-input from">
-          <div className="heading">
+          <div className="search-heading">
             <img src={getOnBus} className="imgIcon" />
             <p className="input-heading">From</p>
           </div>
           <PlaceAutoComplete setPlace={setFrom} />
         </div>
         <div className="search-input to">
-          <div className="heading">
+          <div className="search-heading">
             <img src={getOffBus} className="imgIcon" />
             <p className="input-heading">To</p>
           </div>
           <PlaceAutoComplete setPlace={setTo} />
         </div>
         <div className="search-input date">
-          <div className="heading">
+          <div className="search-heading">
             <CalendarMonthOutlined className="icon" />
             <p className="input-heading">Travel Date</p>
           </div>
           <MuiDayPicker date={date} setDate={setDate} />
         </div>
       </div>
-      <div className="search-btn">
-        <button className="btn extra-btn">SEARCH BUSES</button>
-      </div>
-    </>
+      <button className="btn extra-btn">SEARCH BUSES</button>
+    </div>
   );
 };
 

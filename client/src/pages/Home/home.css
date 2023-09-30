@@ -1,13 +1,27 @@
 .home {
   width: 100%;
-  height: calc(100% - 80px);
 }
 .hero {
   background-image: url("../../assets/bushero.jpg");
   background-size: cover;
   background-position: center;
-  height: 70%;
+  padding: 10% 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heading {
+  font-size: 1.5em;
+  font-family: var(--ralewayFont);
+  width: fit-content;
+  margin: 45px auto;
+  text-align: center;
+}
+
+@media (max-width: 612px){
+  .heading{
+    font-size: 17.5px;
+    width: 80%;
+  }
 }

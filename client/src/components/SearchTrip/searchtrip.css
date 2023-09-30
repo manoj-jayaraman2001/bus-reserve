@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.heading {
+.search-heading {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -37,7 +37,13 @@
 }
 .extra-btn {
   box-shadow: 0 0 2px 0.5px whitesmoke;
+  background-color: var(--primaryDark);
+  padding: 15px 35px;
   font-weight: 600;
+  font-family: var(--ralewayFont);
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
 }
 @media (min-width: 756px) {
   .search-parameters {

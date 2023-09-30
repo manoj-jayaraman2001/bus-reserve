@@ -17,7 +17,6 @@ const Navbar = () => {
         </div>
         <div className="links">
           <NavLink>Ticket</NavLink>
-          <NavLink>About us</NavLink>
           <NavLink>Contact us</NavLink>
         </div>
         <div className="auth">
@@ -40,7 +39,6 @@ const Navbar = () => {
 
         <div className={`mobile-menu ${menuOpen ? "open" : "close"}`}>
           <NavLink>Tickets</NavLink>
-          <NavLink>About us</NavLink>
           <NavLink>Contact us</NavLink>
           <button className="btn-option">Register</button>
           <button className="btn">Login</button>
